@@ -108,5 +108,5 @@ streamlit run main.py
 
 **Tejas Manoj** — Data & ML Engineer
 
-- [LinkedIn](https://www.linkedin.com/in/tejasmanoj/)
+- [LinkedIn](https://www.linkedin.com/in/iamteju/)
 - [GitHub](https://github.com/iam-teju)
