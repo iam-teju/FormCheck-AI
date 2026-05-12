@@ -4,7 +4,7 @@ Real-time AI gym coach that uses computer vision to detect exercise form, count 
 
 ## Demo
 
-> [**Try it live →**](#) *(add your Streamlit deployment link)*
+> [**Try it live →**](https://formcheck-ai.streamlit.app/)
 
 ## What It Does
 
