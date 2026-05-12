@@ -5,6 +5,8 @@ Real-time AI gym coach that uses computer vision to detect exercise form, count 
 ## Demo
 
 > [**Try it live →**](https://formcheck-ai.streamlit.app/)
+> 
+> [**Landing Page →**](https://formcheckai.netlify.app/)
 
 ## What It Does
 
