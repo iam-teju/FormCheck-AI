@@ -1,0 +1,385 @@
+/* =========================================================
+   FORMCHECK AI — GOLD FITNESS THEME
+========================================================= */
+
+:root {
+  --fc-accent: #FFB800;
+  --fc-accent-hover: #E5A600;
+  --fc-accent-dim: rgba(255, 184, 0, 0.10);
+  --fc-accent-glow: rgba(255, 184, 0, 0.20);
+  --fc-bg: #0A0D14;
+  --fc-surface: #111620;
+  --fc-surface-hover: #1A2030;
+  --fc-card: #131820;
+  --fc-border: rgba(255, 255, 255, 0.06);
+  --fc-border-accent: rgba(255, 184, 0, 0.25);
+  --fc-text: #FFFFFF;
+  --fc-text-muted: #6B7A94;
+  --fc-sidebar: #0D1118;
+}
+
+/* =========================================================
+   FIX: HIDE SIDEBAR COLLAPSE BUTTON TEXT LEAK
+========================================================= */
+
+[data-testid="stSidebarCollapseButton"] button span,
+[data-testid="stSidebarCollapsedControl"] button span {
+  font-size: 0 !important;
+  visibility: hidden !important;
+}
+
+[data-testid="stSidebarCollapseButton"] button,
+[data-testid="stSidebarCollapsedControl"] button {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-size: 0 !important;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.stApp {
+  background-color: var(--fc-bg);
+  color: var(--fc-text);
+}
+
+[data-testid="stSidebar"] {
+  background-color: var(--fc-sidebar);
+  border-right: 1px solid var(--fc-border);
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+.block-container,
+.block-container *,
+[data-testid="stSidebar"],
+[data-testid="stSidebar"] * {
+  font-family: 'AdobeClean', 'Outfit', sans-serif !important;
+}
+
+/* Main page title */
+.block-container h1 {
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  font-size: 2.2rem !important;
+  line-height: 1.15 !important;
+}
+
+/* Subtitle */
+.block-container h4 {
+  font-weight: 400 !important;
+  color: var(--fc-text-muted) !important;
+  letter-spacing: 0.01em !important;
+  font-size: 1rem !important;
+}
+
+/* Sidebar title */
+[data-testid="stSidebar"] h1 {
+  font-weight: 700 !important;
+  font-size: 1.35rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Sidebar subheaders — label style */
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+  font-weight: 600 !important;
+  font-size: 0.7rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.14em !important;
+  color: var(--fc-text-muted) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.block-container {
+  padding: 48px 3rem !important;
+  max-width: 780px !important;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button,
+.stButton button,
+.stDownloadButton button,
+.MuiBox-root button {
+  background-color: var(--fc-surface) !important;
+  border: 1px solid var(--fc-border) !important;
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', 'Outfit', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  font-size: 0.78rem !important;
+  transition: all 0.15s ease !important;
+  padding: 0.6rem 1rem !important;
+}
+
+button:hover,
+.stButton button:hover,
+.stDownloadButton button:hover {
+  background-color: var(--fc-accent) !important;
+  color: #000 !important;
+  border-color: var(--fc-accent) !important;
+}
+
+/* Form submit — gold by default */
+[data-testid="stBaseButton-secondaryFormSubmit"] {
+  background-color: var(--fc-accent) !important;
+  color: #000 !important;
+  border: none !important;
+  font-weight: 700 !important;
+}
+
+[data-testid="stBaseButton-secondaryFormSubmit"]:hover {
+  background-color: var(--fc-accent-hover) !important;
+}
+
+/* =========================================================
+   INPUTS & SELECTS
+========================================================= */
+
+input,
+textarea,
+[data-testid="stTextInput"] > div,
+[data-testid="stSelectbox"] > div > div,
+[data-baseweb="select"] > div,
+[data-baseweb="popover"] ul,
+[data-baseweb="menu"] {
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', 'Outfit', sans-serif !important;
+}
+
+input:focus {
+  border-color: var(--fc-accent) !important;
+  box-shadow: 0 0 0 1px var(--fc-accent) !important;
+}
+
+/* =========================================================
+   METRICS CARDS
+========================================================= */
+
+[data-testid="stMetric"] {
+  background: var(--fc-card);
+  border: 1px solid var(--fc-border);
+  border-left: 3px solid var(--fc-accent);
+  padding: 0.85rem 1.1rem;
+  border-radius: 0;
+  transition: all 0.15s ease;
+}
+
+[data-testid="stMetric"]:hover {
+  border-left-color: var(--fc-accent-hover);
+  background: var(--fc-surface-hover);
+}
+
+[data-testid="stMetric"] div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[data-testid="stMetricValue"] {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: var(--fc-accent) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+[data-testid="stMetricLabel"] {
+  font-size: 0.72rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  opacity: 0.45;
+  font-weight: 500 !important;
+}
+
+[data-testid="stMetric"] div label p {
+  font-size: 0.72rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+/* =========================================================
+   CAPTION (user name)
+========================================================= */
+
+[data-testid="stCaptionContainer"] p {
+  color: var(--fc-accent) !important;
+  font-weight: 500 !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* =========================================================
+   DIVIDERS
+========================================================= */
+
+[data-testid="stSidebar"] hr {
+  border-color: var(--fc-border) !important;
+  margin: 0.8rem 0 !important;
+}
+
+hr {
+  border-color: var(--fc-border) !important;
+}
+
+/* =========================================================
+   INFO / SUCCESS BOXES
+========================================================= */
+
+[data-testid="stAlertContentInfo"] {
+  background-color: var(--fc-accent-dim) !important;
+  border-left: 3px solid var(--fc-accent) !important;
+  color: var(--fc-text) !important;
+  border-radius: 0 !important;
+}
+
+[data-testid="stAlertContentSuccess"] {
+  background-color: rgba(0, 200, 100, 0.08) !important;
+  border-left: 3px solid #00C864 !important;
+  color: var(--fc-text) !important;
+  border-radius: 0 !important;
+}
+
+/* =========================================================
+   CONTAINERS — ZERO RADIUS
+========================================================= */
+
+.stContainer,
+.stExpander,
+.stTabs,
+.stColumns,
+.stPopover,
+.stAlertContainer,
+.stStatusContainer,
+.stTable,
+.stDataFrame,
+.stForm,
+.stSelectbox,
+[data-baseweb="select"] > div,
+[data-testid="stForm"],
+[data-testid="stNumberInputContainer"],
+[data-testid="stDataFrameColumnMenu"],
+[data-testid="stHeadingWithActionElements"],
+[data-testid="stSidebarNavLink"],
+[data-baseweb="popover"],
+[data-baseweb="menu"],
+div[role="menu"],
+div[role="menuitem"] {
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', 'Outfit', sans-serif !important;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.stDataFrame,
+.stDataFrame div,
+.stDataFrameGlideDataEditor {
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', 'Outfit', sans-serif !important;
+}
+
+.stTable table {
+  border-collapse: collapse !important;
+}
+
+.stTable th {
+  background-color: var(--fc-surface) !important;
+  text-transform: uppercase !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.12em !important;
+  color: var(--fc-text-muted) !important;
+  font-weight: 600 !important;
+  padding: 0.7rem 1rem !important;
+}
+
+.stTable td {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.82rem !important;
+  padding: 0.65rem 1rem !important;
+  border-bottom: 1px solid var(--fc-border) !important;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.stForm,
+[data-testid="stForm"] {
+  margin-top: 2rem !important;
+  padding: 2rem 1.5rem !important;
+  background-color: var(--fc-surface) !important;
+  border: 1px solid var(--fc-border) !important;
+  border-top: 3px solid var(--fc-accent) !important;
+  color: #fff;
+}
+
+/* =========================================================
+   INTERACTIVE ELEMENTS
+========================================================= */
+
+.stTextInput,
+.stTextArea,
+.stNumberInput,
+.stSlider,
+.stMultiselect,
+.stRadio,
+.stCheckbox,
+.stToggle,
+.stFileUploader,
+.stColorPicker,
+.stDateInput,
+.stTimeInput,
+.stCameraInput,
+[data-testid="stStatusWidget"] {
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', 'Outfit', sans-serif !important;
+}
+
+/* NUMBER INPUT +/- — keep normal casing */
+[data-testid="stNumberInputContainer"] button {
+  font-size: 0.9rem !important;
+  text-transform: none !important;
+}
+
+/* =========================================================
+   BOLD TEXT IN MARKDOWN — gold accent
+========================================================= */
+
+[data-testid="stMarkdownContainer"] strong {
+  font-family: 'AdobeClean', 'Outfit', sans-serif !important;
+  color: var(--fc-accent) !important;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fc-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A3040;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fc-accent);
+}
